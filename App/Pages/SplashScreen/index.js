@@ -1,15 +1,20 @@
 import * as React from "react";
 import { View, Text, StyleSheet, Image, Dimensions } from "react-native";
 import {
-  logo_bumn,
-  logo_kemenkes,
-  logo_kominfo,
-  logo_kpcpen,
+  LogoBumn,
+  LogoKemenkes,
+  LogoKominfo,
+  LogoKpc,
   LogoSplash,
 } from "../../assets";
 const windowHeight = Dimensions.get("window").height;
 
 export default SplashScreen = ({ navigation }) => {
+  React.useEffect(() => {
+    setTimeout(() => {
+      navigation.replace("SignupScreen");
+    }, 3000);
+  }, [navigation]);
   return (
     <View style={styles.bgMainApp}>
       <View style={styles.imgContainer}>
@@ -19,10 +24,10 @@ export default SplashScreen = ({ navigation }) => {
         <Text style={styles.footherText}>Bekerjasama Dengan :</Text>
       </View>
       <View style={styles.imgStyle2}>
-        <Image source={logo_kpcpen} style={styles.imgSize} />
-        <Image source={logo_kominfo} style={styles.imgSize} />
-        <Image source={logo_kemenkes} style={styles.imgSize} />
-        <Image source={logo_bumn} style={styles.imgSize} />
+        <Image source={LogoKpc} style={styles.imgSize} />
+        <Image source={LogoKominfo} style={styles.imgSize} />
+        <Image source={LogoKemenkes} style={styles.imgSize} />
+        <Image source={LogoBumn} style={styles.imgSize} />
       </View>
     </View>
   );

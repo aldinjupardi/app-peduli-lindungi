@@ -4,10 +4,10 @@
     "slug": "peduli-lindungi",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./App/assets/img/icon.png",
+    "icon": "./App/assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./App/assets/img/splash.png",
+      "image": "./App/assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -22,12 +22,12 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./App/assets/img/adaptive-icon.png",
+        "foregroundImage": "./App/assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       }
     },
     "web": {
-      "favicon": "./App/assets/img/favicon.png"
+      "favicon": "./App/assets/favicon.png"
     }
   }
 }

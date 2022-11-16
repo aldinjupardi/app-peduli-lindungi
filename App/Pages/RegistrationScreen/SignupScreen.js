@@ -7,30 +7,30 @@ import {
   Dimensions,
   TextInput,
 } from "react-native";
-import { MaterialCommunityIcons } from '@expo/vector-icons';
 import {
-  logo_bumn,
+  LogoBumn,
   LogoKemenkes,
   LogoKominfo,
   LogoKpc,
-  logo_top,
-  logo_kpcpen,
-  logo_kominfo,
-  logo_kemenkes,
+  LogoPeduli,
+  LogoPesan,
 } from "../../assets";
 import { PrimaryButton } from "../../Componets";
+
 const windowHeight = Dimensions.get("window").height;
 
 export default SignupScreen = ({ navigation }) => {
   return (
     <View style={styles.bgMainApp}>
       <View style={styles.imgContainer}>
-        <Image source={logo_top} style={styles.imgStyle} />
+        <Image source={LogoPeduli} style={styles.imgStyle} />
       </View>
       <View>
         <TextInput
-          style={styles.Input }
-          placeholder="Tulis Email Anda @gmail.com"
+          Image
+          source={LogoPesan}
+          style={styles.Input}
+          placeholder="youremail@domain.com"
         />
         <TextInput
           style={styles.InputPass}
@@ -39,7 +39,7 @@ export default SignupScreen = ({ navigation }) => {
         <PrimaryButton
           title="Login"
           style={styles.customeButton}
-          onPress={() => navigation.navigate("SplashScreen")}
+          onPress={() => navigation.navigate("HomeScreen")}
         />
       </View>
 
@@ -47,10 +47,10 @@ export default SignupScreen = ({ navigation }) => {
         <Text style={styles.footherText}>Bekerjasama Dengan :</Text>
       </View>
       <View style={styles.imgStyle2}>
-        <Image source={logo_kpcpen} style={styles.imgSize} />
-        <Image source={logo_kominfo} style={styles.imgSize} />
-        <Image source={logo_kemenkes} style={styles.imgSize} />
-        <Image source={logo_bumn} style={styles.imgSize} />
+        <Image source={LogoKpc} style={styles.imgSize} />
+        <Image source={LogoKominfo} style={styles.imgSize} />
+        <Image source={LogoKemenkes} style={styles.imgSize} />
+        <Image source={LogoBumn} style={styles.imgSize} />
       </View>
     </View>
   );
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
   },
   imgStyle: {
     marginTop: windowHeight / 8,
-    marginBottom:20,
+    marginBottom: 20,
   },
   Input: {
     borderWidth: 1,
@@ -116,7 +116,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   footherText: {
-    marginTop: 90,
+    marginTop: 100,
     fontSize: 16,
     marginBottom: 0,
   },
